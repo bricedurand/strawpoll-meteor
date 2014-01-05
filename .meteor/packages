@@ -7,3 +7,5 @@ standard-app-packages
 insecure
 preserve-inputs
 iron-router
+collection2
+autoform

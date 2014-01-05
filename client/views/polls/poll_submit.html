@@ -1,0 +1,17 @@
+<template name="pollSubmit">
+	{{#autoForm schema="Polls" id="submitPollForm" class="form-horizontal"}}
+		<div class="control-group">
+	    	{{afFieldLabel 'question'}}            
+	    	<div class="controls">
+	      		{{afFieldInput 'question'}}
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	{{afFieldLabel 'author'}}            
+	    	<div class="controls">
+	      		{{afFieldInput 'author'}}
+	    	</div>
+	  	</div>
+	  	<button type="submit" class="btn btn-primary insert">Create Poll</button>
+	{{/autoForm}}
+</template>
