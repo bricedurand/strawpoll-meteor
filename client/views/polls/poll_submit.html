@@ -1,4 +1,5 @@
 <template name="pollSubmit">
+	<h2>Create a Poll</h2>
 	{{#autoForm schema="Polls" id="submitPollForm" class="form-horizontal"}}
 		<div class="control-group">
 	    	{{afFieldLabel 'question'}}            
@@ -14,4 +15,7 @@
 	  	</div>
 	  	<button type="submit" class="btn btn-primary insert">Create Poll</button>
 	{{/autoForm}}
+
+	<h2 style="margin-top: 40px">Previous Polls</h2>
+	{{> pollList}}
 </template>

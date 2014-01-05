@@ -1,6 +1,5 @@
 <template name="poll">
-	{{#with poll}}
-		<p>{{ title }}</p>
-		<p>{{ author }}</p>
-	{{/with}}
+	
+	<p><a href="{{pathFor 'pollShow'}}">{{ question }}</a> <span style="color: grey;font-size: 13px;">by {{ author }}</span></p>
+	
 </template>
