@@ -1,5 +1,5 @@
-Template.poll.helpers({
-	poll: function() {
-		return Polls.findOne();
-	}
-});
+// Template.poll.helpers({
+// 	poll: function() {
+// 		return Polls.findOne();
+// 	}
+// });
