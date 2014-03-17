@@ -1,4 +1,9 @@
 <template name="pollShow">
-	<div>{{question}}</div>
-	<div>{{author}}</div>
+	<a href="{{pathFor 'pollSubmit'}}">Back bitch</a>
+	<p>{{question}}</p>
+	<ul>
+		{{#each options}}
+			<li>{{this}}</li>
+		{{/each}}
+	</ul>
 </template>

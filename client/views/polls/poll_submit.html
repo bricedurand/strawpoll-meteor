@@ -1,21 +1,51 @@
 <template name="pollSubmit">
 	<h2>Create a Poll</h2>
-	{{#autoForm schema="Polls" id="submitPollForm" class="form-horizontal"}}
-		<div class="control-group">
-	    	{{afFieldLabel 'question'}}            
-	    	<div class="controls">
-	      		{{afFieldInput 'question'}}
-	    	</div>
+	<form class="form-horizontal" role="form">
+	  <div class="form-group">
+	    <label for="question" class="col-md-2 control-label">Question</label>
+	    <div class="col-md-6">
+	      <input type="text" class="form-control" name="question" placeholder="Ex: What should I eat today ?">
+	    </div>
+	  </div>
+	  
+	  <div class="form-group">
+	  	<label for="option1" class="col-md-2 control-label">1.</label>
+	  	<div class="col-md-6">
+	  		<input type="text" class="form-control" name="option1" placeholder="Ex: Cheese">
 	  	</div>
-	  	<div class="control-group">
-	    	{{afFieldLabel 'author'}}            
-	    	<div class="controls">
-	      		{{afFieldInput 'author'}}
-	    	</div>
+	  </div>
+
+	  <div class="form-group">
+	  	<label for="option2" class="col-md-2 control-label">2.</label>
+	  	<div class="col-md-6">
+	  		<input type="text" class="form-control" name="option2" placeholder="Ex: Nutella">
 	  	</div>
-	  	<button type="submit" class="btn btn-primary insert">Create Poll</button>
-	{{/autoForm}}
+	  </div>
+
+	  <div class="form-group">
+	  	<label for="option3" class="col-md-2 control-label">3.</label>
+	  	<div class="col-md-6">
+	  		<input type="text" class="form-control" name="option3" >
+	  	</div>
+	  </div>
+
+	  	  <div class="form-group">
+	  	<label for="option4" class="col-md-2 control-label">4.</label>
+	  	<div class="col-md-6">
+	  		<input type="text" class="form-control" name="option4" >
+	  	</div>
+	  </div>
+
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-default">Create Poll</button>
+	    </div>
+	  </div>
+	</form>
 
 	<h2 style="margin-top: 40px">Previous Polls</h2>
 	{{> pollList}}
+
+
 </template>
