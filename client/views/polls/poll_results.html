@@ -1,0 +1,9 @@
+<template name="pollResults">
+  <p class="lead">{{poll.question}}</p>
+
+  <ul>
+  	{{#each votes}}
+  		{{option}}
+  	{{/each}}
+  </ul>
+</template>

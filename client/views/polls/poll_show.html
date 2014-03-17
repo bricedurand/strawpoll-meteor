@@ -1,9 +1,19 @@
 <template name="pollShow">
-	<a href="{{pathFor 'pollSubmit'}}">Back bitch</a>
-	<p>{{question}}</p>
-	<ul>
+	<a href="{{pathFor 'pollSubmit'}}"> Back bitch</a>
+	<p class="lead">{{question}}</p>
+
+	<form>
+		<input name="pollId" type="hidden" value="{{_id}}"/>
 		{{#each options}}
-			<li>{{this}}</li>
+			<div class="checkbox">
+				<label>
+					<input name="option" type="radio" value="{{this}}"> {{this}}
+				</label>
+			</div>
 		{{/each}}
-	</ul>
+		<input type="submit" class="btn btn-default"/>
+	</form>
+	<hr>
+	<a href="{{pathFor 'pollResults'}}" >Results</a>
+
 </template>

@@ -5,3 +5,7 @@ Meteor.publish('polls', function() {
 Meteor.publish('singlePoll', function(id) { 
 	return id && Polls.find(id);
 });
+
+Meteor.publish('votes', function() { 
+	return Votes.find();
+});
