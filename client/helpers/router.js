@@ -1,5 +1,7 @@
 Router.configure({ 
-	layoutTemplate: 'layout'
+	layoutTemplate: 'layout',
+  loadingTemplate: 'loading',
+  waitOn: function() { return [Meteor.subscribe('polls'), Meteor.subscribe('votes')]; }
 });
 
 Router.map(function() { 

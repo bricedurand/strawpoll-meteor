@@ -1,9 +1,12 @@
 <template name="pollResults">
+  {{#with poll}}
+  	<a href="{{ pathFor 'pollShow' }}">Back to poll bitch</a>
+  {{/with}}
   <p class="lead">{{poll.question}}</p>
 
   <ul>
-  	{{#each votes}}
-  		{{option}}
+  	{{#each poll.options}}
+  		<li>{{this}} {{ optionCount this }}</li>
   	{{/each}}
   </ul>
 </template>
